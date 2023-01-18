@@ -1,0 +1,208 @@
+
+/* common */
+
+.wrapper {
+  /* outline: 2px solid red; */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container {
+  /* outline: 2px solid blue; */
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 100px;
+}
+
+img {
+  width: 100%;
+}
+
+section {
+  margin-bottom: 120px;
+}
+
+h3 {
+  position: relative;
+  font-size: 16px;
+  font-weight: lighter;
+  color: #aaa;
+  margin: 0 0 12px 12px;
+  padding-bottom: 14px;
+  border-bottom: solid #eee 1px;
+}
+
+h3::before {
+  content: "-";
+  position: absolute;
+  left: -12px;
+}
+
+h3::after {
+  content: "-";
+  position: absolute;
+  left: 68px;
+}
+
+.text_area {
+  position: relative;
+  background-color: #f3f3f3;
+}
+
+span {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+.text_area > p {
+  margin-left: 30px;
+  padding: 20px;
+}
+
+
+/* header */
+
+header {
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  top: 0;
+  z-index: 1;
+}
+
+header a {
+  display: block;
+  text-decoration: none;
+}
+
+header a h1 {
+  font-size: 16px;
+  color: #000;
+  padding: 20px;
+}
+
+
+
+/* hero */
+
+.hero {
+  margin: 100px 0 140px 0;
+}
+
+.hero p {
+  position: relative;
+  font-weight: bold;
+  color: #aaa;
+  margin-left: 24px;
+}
+
+.hero p::before {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 2px;
+  background-color: #aaa;
+  position: absolute;
+  top: 10px;
+  left: -22px;
+}
+
+.hero p::after {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 2px;
+  background-color: #aaa;
+  position: absolute;
+  top: 10px;
+  left: 150px;
+}
+
+.hero_img {
+  margin-bottom: 100px;
+}
+
+
+/* mission */
+
+.mission h3::after {
+  content: "-";
+  position: absolute;
+  left: 36px;
+}
+
+.mission .text_area {
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.mission ol {
+  font-weight: bold;
+  margin-left: 30px;
+}
+
+.mission ol li+li {
+  margin-top: 5px;
+}
+
+
+/* company */
+
+.company h3 {
+  margin-bottom: 30px;
+}
+
+.company dl {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.company dt {
+  font-weight: bold;
+  width: 50%;
+  padding: 22px 0;
+  border-bottom: solid 1.5px #eee;
+}
+
+.company dd {
+  width: 50%;
+  padding: 22px 0;
+  border-bottom: solid 1.5px #eee;
+}
+
+/* footer */
+
+footer {
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 70px;
+}
+
+
+/* レスポンシブ対応 */
+
+@media (max-width: 680px) {
+  .company dl {
+    display: block;
+  }
+
+  .company dt {
+    width: 100%;
+    padding: 22px 0px 10px 0px;
+    border-bottom: none;
+  }
+
+  .company dd {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 550px) {
+  .container {
+    padding: 0 20px;
+  }
+}
