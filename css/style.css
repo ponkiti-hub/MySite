@@ -20,6 +20,12 @@ img {
 
 section {
   margin-bottom: 120px;
+  transition: transform 1.5s, opacity 2s;
+}
+
+section.hidden {
+  opacity: 0;
+  transform: translateY(30px);
 }
 
 h3 {
@@ -116,57 +122,67 @@ header a h1 {
   background-color: #aaa;
   position: absolute;
   top: 10px;
-  left: 150px;
+  left: 134px;
 }
 
 .hero_img {
   margin-bottom: 100px;
+  width: 100%;
+}
+
+.hero_img img {
+  width: 100%;
+}
+
+/* Aspiration */
+
+.aspiration .text_area {
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.aspiration ol {
+  font-weight: bold;
+  margin-left: 30px;
+}
+
+.aspiration ol li+li {
+  margin-top: 5px;
+}
+
+/* Ability */
+
+.ability h3::after {
+  left: 36px;
 }
 
 
-/* mission */
+/* introduction */
 
-.mission h3::after {
+.introduction h3 {
+  margin-bottom: 30px;
+}
+
+.introduction h3::after {
   content: "-";
   position: absolute;
   left: 36px;
 }
 
-.mission .text_area {
-  font-weight: bold;
-  margin-bottom: 50px;
-}
-
-.mission ol {
-  font-weight: bold;
-  margin-left: 30px;
-}
-
-.mission ol li+li {
-  margin-top: 5px;
-}
-
-
-/* company */
-
-.company h3 {
-  margin-bottom: 30px;
-}
-
-.company dl {
+.introduction dl {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
 }
 
-.company dt {
+.introduction dt {
   font-weight: bold;
   width: 50%;
   padding: 22px 0;
   border-bottom: solid 1.5px #eee;
 }
 
-.company dd {
+.introduction dd {
   width: 50%;
   padding: 22px 0;
   border-bottom: solid 1.5px #eee;
@@ -185,17 +201,17 @@ footer {
 /* レスポンシブ対応 */
 
 @media (max-width: 680px) {
-  .company dl {
+  .introduction dl {
     display: block;
   }
 
-  .company dt {
+  .introduction dt {
     width: 100%;
     padding: 22px 0px 10px 0px;
     border-bottom: none;
   }
 
-  .company dd {
+  .introduction dd {
     width: 100%;
   }
 }
